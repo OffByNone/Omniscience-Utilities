@@ -1,6 +1,6 @@
 {
 	"name": "omniscienceutilities",
-	"version": "0.5",
+	"version": "0.5.0",
 	"description": "Modules for Omniscience that don't really fit anywhere else.",
 	"main": "index.js",
 	"author": "OffByNone",
