@@ -10,8 +10,14 @@
 		"url": "https://github.com/offbynone/omniscienceutilities/issues",
 		"email": "offbynone@outlook.com"
 	},
+	"keywords": [
+		"omniscience"
+	],
 	"engines": {
 		"Firefox": ">=38.0a1",
 		"Fennec": ">=38.0a1"
+	},
+	"scripts": {
+		"test": "node ./test/test.js"
 	}
 }

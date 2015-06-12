@@ -1,10 +1,8 @@
-const FirefoxInit = require("./FirefoxInit");
+const ApiResolver = require("./lib/ApiResolver");
+const CompositionRoot = require("./CompositionRoot");
 
-var compositionRoot = FirefoxInit.createCompositionRoot();
 
-module.exports = {
-	UrlProvider: compositionRoot.UrlProvider(),
-	FileInformationService: compositionRoot.FileInformationService()
-};
+var apiResolver = new ApiResolver();
+var compositionRoot = new CompositionRoot(apiResolver.resolve());
 
-//todo: compile with babel
+module.exports = compositionRoot;
