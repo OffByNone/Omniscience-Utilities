@@ -1,0 +1,17 @@
+{
+	"name": "omniscienceutilities",
+	"version": "0.5",
+	"description": "Modules for Omniscience that don't really fit anywhere else.",
+	"main": "index.js",
+	"author": "OffByNone",
+	"license": "MIT",
+	"homepage": "https://github.com/offbynone/omniscienceutilities",
+	"bugs": {
+		"url": "https://github.com/offbynone/omniscienceutilities/issues",
+		"email": "offbynone@outlook.com"
+	},
+	"engines": {
+		"Firefox": ">=38.0a1",
+		"Fennec": ">=38.0a1"
+	}
+}
