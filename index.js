@@ -1,8 +1,9 @@
-const ApiResolver = require("./lib/ApiResolver");
+const SdkResolver = require("omniscience-sdk-resolver");
 const CompositionRoot = require("./CompositionRoot");
+require("babel/register");
 
 
-var apiResolver = new ApiResolver();
-var compositionRoot = new CompositionRoot(apiResolver.resolve());
+var sdkResolver = new SdkResolver();
+var compositionRoot = new CompositionRoot(sdkResolver.resolve());
 
 module.exports = compositionRoot;

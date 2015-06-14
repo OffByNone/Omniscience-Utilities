@@ -1,15 +1,11 @@
 const UrlProvider = require('./lib/UrlProvider');
-const FileInformationService = require('./lib/FileInformationService');
 
 class CompositionRoot {
-	constructor(api) {
-		this._api = api;
+	constructor(sdk) {
+		this._sdk = sdk;
 	}
 	createUrlProvider(){
-		return new UrlProvider(this._api);
-	}
-	createFileInformationService(){
-		return new FileInformationService(this._api);
+		return new UrlProvider(this._sdk.url);
 	}
 }
 
