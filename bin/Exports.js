@@ -5,7 +5,8 @@ var _createClass = (function () { function defineProperties(target, props) { for
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 var UrlProvider = require('./UrlProvider');
-var Eventable = require('./Eventable');
+var Fetch = require('./fetch');
+var _MD5 = require('./MD5');
 
 var Utilities = (function () {
 	function Utilities(sdk) {
@@ -17,12 +18,21 @@ var Utilities = (function () {
 	_createClass(Utilities, [{
 		key: 'createUrlProvider',
 		value: function createUrlProvider() {
-			return new UrlProvider(this._sdk.url);
+			return new UrlProvider(this._sdk.url());
+		}
+	}, {
+		key: 'fetch',
+		value: function fetch() {
+			return Fetch(this._sdk.XMLHttpRequest());
+		}
+	}, {
+		key: 'MD5',
+		value: function MD5() {
+			return _MD5;
 		}
 	}]);
 
 	return Utilities;
 })();
 
-module.exports.Utilities = Utilities;
-module.exports.Eventable = Eventable;
+module.exports = Utilities;

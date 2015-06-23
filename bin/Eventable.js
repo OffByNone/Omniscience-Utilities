@@ -8,7 +8,7 @@ var Eventable = (function () {
 	function Eventable() {
 		_classCallCheck(this, Eventable);
 
-		this._subscriptions = [];
+		this._subscriptions = {};
 	}
 
 	_createClass(Eventable, [{
