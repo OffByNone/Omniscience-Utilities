@@ -1,2 +1,4 @@
-[![Dependency Status](http://img.shields.io/gemnasium/doge/wow.svg)](https://gemnasium.com/doge/wow)
+[![![Circle CI](https://circleci.com/gh/OffByNone/Omniscience-Utilities.svg?style=svg)](https://circleci.com/gh/OffByNone/Omniscience-Utilities)
+
+
 Modules for Omniscience that don't really fit anywhere else.
