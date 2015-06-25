@@ -1,2 +1,3 @@
 ./lib/fetch.js
 ./lib/MD5.js
+./spec

@@ -1,8 +1,7 @@
 ///<reference path="./support/jasmine.d.ts" />
-/*eslint prefer-const:0*/
-"use strict";
 
 require("babel/register");
+
 const Constants = require("../lib/Constants");
 const Eventable = require("../lib/Eventable");
 
@@ -10,16 +9,16 @@ describe("Eventable", function () {
 	describe("on/emit", function () {
 		it("should call all callbacks bound using on and pass in each parameter separately, when calling emit using same eventType", function () {
 			//arrange
-			let sut = new Eventable();
-			let eventType = "testEvent";
+			var sut = new Eventable();
+			var eventType = "testEvent";
 
-			let callback1 = jasmine.createSpy("firstcallback");
-			let callback2 = jasmine.createSpy("secondcallback");
-			let callback3 = jasmine.createSpy("thirdcallback");
+			var callback1 = jasmine.createSpy("firstcallback");
+			var callback2 = jasmine.createSpy("secondcallback");
+			var callback3 = jasmine.createSpy("thirdcallback");
 
-			let arg1 = "arg1";
-			let arg2 = "arg2";
-			let arg3 = "arg3";
+			var arg1 = "arg1";
+			var arg2 = "arg2";
+			var arg3 = "arg3";
 
 			sut.on(eventType, callback1);
 			sut.on(eventType, callback2);
@@ -37,7 +36,7 @@ describe("Eventable", function () {
 	describe("on", function () {
 		it("should throw error when eventType is null", function () {
 			//arrange
-			let sut = new Eventable();
+			var sut = new Eventable();
 
 			try {
 				sut.on(null, null);
@@ -49,7 +48,7 @@ describe("Eventable", function () {
 		});
 		it("should throw error when callback is not a function", function () {
 			//arrange
-			let sut = new Eventable();
+			var sut = new Eventable();
 
 			try {
 				sut.on("someevent", null);
@@ -63,7 +62,7 @@ describe("Eventable", function () {
 	describe("emit", function () {
 		it("should throw error when eventType is null", function () {
 			//arrange
-			let sut = new Eventable();
+			var sut = new Eventable();
 
 			try {
 				sut.on(null, null);
