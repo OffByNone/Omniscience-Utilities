@@ -1,0 +1,15 @@
+{
+	"env": {
+		"jasmine": true,
+		"node": true,
+		"es6": true
+	},
+	"rules": {
+		"curly": [ 2, "multi"],
+		"eol-last": 0,
+		"no-underscore-dangle": 0,
+		"no-var": 1,
+		"prefer-const": 1,
+		"new-cap": 1
+	}
+}

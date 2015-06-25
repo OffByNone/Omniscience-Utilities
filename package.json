@@ -1,32 +1,32 @@
 {
-  "name": "omniscience-utilities",
-  "version": "0.6.3",
-  "description": "Modules for Omniscience that don't really fit anywhere else.",
-  "main": "./bin/index.js",
-  "author": "OffByNone",
-  "license": "MIT",
-  "homepage": "https://github.com/offbynone/omniscience-utilities",
-  "bugs": {
-	"url": "https://github.com/offbynone/omniscience-utilities/issues",
-	"email": "offbynone@outlook.com"
-  },
-  "keywords": [
-	"omniscience"
-  ],
-  "engines": {
-	"Firefox": ">=38.0a1",
-	"Fennec": ">=38.0a1"
-  },
-  "repository": {
-	"type": "git",
-	"url": "git://github.com/offbynone/omniscience-utilities.git"
-  },
-  "devDependencies": {
-	"babel": "^5.5.8",
-	"eslint": "^0.22.1",
-	"jasmine": "^2.3.1"
-  },
-  "dependencies": {
-	"omniscience-sdk-resolver": "^0.5.0"
-  }
+	"name": "omniscience-utilities",
+	"version": "0.7.0",
+	"description": "Modules for Omniscience that don't really fit anywhere else.",
+	"main": "./bin/index.js",
+	"author": "OffByNone",
+	"license": "MIT",
+	"homepage": "https://github.com/offbynone/omniscience-utilities",
+	"bugs": {
+		"url": "https://github.com/offbynone/omniscience-utilities/issues",
+		"email": "offbynone@outlook.com"
+	},
+	"keywords": [
+		"omniscience"
+	],
+	"engines": {
+		"Firefox": ">=38.0a1",
+		"Fennec": ">=38.0a1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/offbynone/omniscience-utilities.git"
+	},
+	"devDependencies": {
+		"babel": "^5.5.8",
+		"eslint": "^0.23.0",
+		"jasmine": "^2.3.1"
+	},
+	"dependencies": {
+		"omniscience-sdk-resolver": "^0.5.0"
+	}
 }
