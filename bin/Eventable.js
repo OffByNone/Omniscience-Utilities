@@ -4,6 +4,8 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Constants = require("./Constants");
+
 var Eventable = (function () {
 	function Eventable() {
 		_classCallCheck(this, Eventable);
@@ -14,7 +16,9 @@ var Eventable = (function () {
 	_createClass(Eventable, [{
 		key: "on",
 		value: function on(eventType, callback) {
-			//todo: validate params
+			if (!eventType) throw new Error(Constants.argumentNullError + "eventType");
+			if (typeof callback !== "function") throw new Error(Constants.argumentTypeError + "callback must be a function.");
+
 			this._subscriptions[eventType] = this._subscriptions[eventType] || [];
 			this._subscriptions[eventType].push(callback);
 		}
@@ -25,7 +29,7 @@ var Eventable = (function () {
 				data[_key - 1] = arguments[_key];
 			}
 
-			//todo: validate params
+			if (!eventType) throw new Error(Constants.argumentNullError + "eventType");
 			if (!Array.isArray(this._subscriptions[eventType])) return; //nobody has subscribed yet, just return
 			this._subscriptions[eventType].forEach(function (subscriptionCallback) {
 				return subscriptionCallback.apply(undefined, data);

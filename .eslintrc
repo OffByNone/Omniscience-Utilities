@@ -9,7 +9,9 @@
 		"eol-last": 0,
 		"no-underscore-dangle": 0,
 		"no-var": 1,
-		"prefer-const": 1,
-		"new-cap": 1
+		"new-cap": 1,
+		"quotes": 0,
+		"no-unused-vars": 1,
+		"dot-notation": 1
 	}
 }
