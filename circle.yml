@@ -1,3 +1,5 @@
 test:
   override:
     - jasmine
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

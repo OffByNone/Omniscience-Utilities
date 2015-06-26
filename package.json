@@ -23,6 +23,7 @@
 	},
 	"devDependencies": {
 		"babel": "^5.5.8",
+		"codecov.io": "^0.1.4",
 		"eslint": "^0.23.0",
 		"jasmine": "^2.3.1"
 	},
