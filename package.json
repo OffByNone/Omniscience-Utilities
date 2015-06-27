@@ -30,6 +30,7 @@
     "gulp-babel": "^5.1.0",
     "gulp-eslint": "^0.14.0",
     "gulp-jasmine": "^2.0.1",
+	"istanbul": "^0.3.16",
     "jasmine": "^2.3.1",
     "jasmine-reporters": "^2.0.6"
   },
