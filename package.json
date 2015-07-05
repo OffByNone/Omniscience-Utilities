@@ -4,11 +4,10 @@
   "description": "Modules for Omniscience that don't really fit anywhere else.",
   "main": "./bin/index.js",
   "author": "OffByNone",
-  "license": "MIT",
+  "license": "GNU GPL v3",
   "homepage": "https://github.com/offbynone/omniscience-utilities",
   "bugs": {
-    "url": "https://github.com/offbynone/omniscience-utilities/issues",
-    "email": "offbynone@outlook.com"
+    "url": "https://github.com/offbynone/omniscience-utilities/issues"
   },
   "keywords": [
     "omniscience"
