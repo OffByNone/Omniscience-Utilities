@@ -7,37 +7,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Constants = require("./Constants");
 
 var Eventable = (function () {
-	function Eventable() {
-		_classCallCheck(this, Eventable);
+    function Eventable() {
+        _classCallCheck(this, Eventable);
 
-		this._subscriptions = {};
-	}
+        this._subscriptions = {};
+    }
 
-	_createClass(Eventable, [{
-		key: "on",
-		value: function on(eventType, callback) {
-			if (!eventType) throw new Error(Constants.argumentNullError + "eventType");
-			if (typeof callback !== "function") throw new Error(Constants.argumentTypeError + "callback must be a function.");
+    _createClass(Eventable, [{
+        key: "on",
+        value: function on(eventType, callback) {
+            if (!eventType) throw new Error(Constants.argumentNullError + "eventType");
+            if (typeof callback !== "function") throw new Error(Constants.argumentTypeError + "callback must be a function.");
 
-			this._subscriptions[eventType] = this._subscriptions[eventType] || [];
-			this._subscriptions[eventType].push(callback);
-		}
-	}, {
-		key: "emit",
-		value: function emit(eventType) {
-			for (var _len = arguments.length, data = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-				data[_key - 1] = arguments[_key];
-			}
+            this._subscriptions[eventType] = this._subscriptions[eventType] || [];
+            this._subscriptions[eventType].push(callback);
+        }
+    }, {
+        key: "emit",
+        value: function emit(eventType) {
+            for (var _len = arguments.length, data = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+                data[_key - 1] = arguments[_key];
+            }
 
-			if (!eventType) throw new Error(Constants.argumentNullError + "eventType");
-			if (!Array.isArray(this._subscriptions[eventType])) return; //nobody has subscribed yet, just return
-			this._subscriptions[eventType].forEach(function (subscriptionCallback) {
-				return subscriptionCallback.apply(undefined, data);
-			});
-		}
-	}]);
+            if (!eventType) throw new Error(Constants.argumentNullError + "eventType");
+            if (!Array.isArray(this._subscriptions[eventType])) return; //nobody has subscribed yet, just return
+            this._subscriptions[eventType].forEach(function (subscriptionCallback) {
+                return subscriptionCallback.apply(undefined, data);
+            });
+        }
+    }]);
 
-	return Eventable;
+    return Eventable;
 })();
 
 module.exports = Eventable;
