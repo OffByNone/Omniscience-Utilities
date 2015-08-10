@@ -6,19 +6,19 @@ var _createClass = (function () { function defineProperties(target, props) { for
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var SdkResolver = require("omniscience-sdk-resolver");
-var Eventable = require("./Eventable");
+var EventableClass = require("./Eventable");
 var UrlProvider = require("./UrlProvider");
 var _fetch = require("./fetch");
 var _MD5 = require("./MD5");
 
-var Utilities = (function () {
-	function Utilities() {
-		_classCallCheck(this, Utilities);
+var UtilitiesClass = (function () {
+	function UtilitiesClass() {
+		_classCallCheck(this, UtilitiesClass);
 
 		this._sdk = new SdkResolver().resolve();
 	}
 
-	_createClass(Utilities, [{
+	_createClass(UtilitiesClass, [{
 		key: "createUrlProvider",
 		value: function createUrlProvider() {
 			return new UrlProvider(this._sdk.url());
@@ -35,8 +35,8 @@ var Utilities = (function () {
 		}
 	}]);
 
-	return Utilities;
+	return UtilitiesClass;
 })();
 
-module.exports.Utilities = Utilities;
-module.exports.Eventable = Eventable;
+module.exports.Utilities = UtilitiesClass;
+module.exports.Eventable = EventableClass;
