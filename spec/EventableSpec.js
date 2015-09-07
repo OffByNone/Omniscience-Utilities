@@ -71,4 +71,44 @@ describe("Eventable", function () {
 			}
 		});
 	});
+	describe("off", function () {
+		it("should throw error when eventType is null", function () {
+			//arrange
+			var sut = new Eventable();
+
+			try {
+				sut.off(null);
+				fail("expected error was not thrown");
+			}
+			catch (e) {
+				expect(e.message).toBe(Constants.argumentNullError + "eventType");
+			}
+		});
+	});
+	describe("off", function () {
+		it("should throw error when eventType is null", function () {
+			//arrange
+			var sut = new Eventable();
+
+			try {
+				sut.off(null);
+				fail("expected error was not thrown");
+			}
+			catch (e) {
+				expect(e.message).toBe(Constants.argumentNullError + "eventType");
+			}
+		});
+		it("should remove any subscriptions for the given event type", function () {
+			//arrange
+			var sut = new Eventable();
+			var eventType = "test event";
+			sut._subscriptions[eventType] = ["this shouldn't exist at the end"];
+
+			//act
+			sut.off(eventType);
+
+			//assert
+			expect(typeof sut._subscriptions[eventType]).toBe("undefined");
+		});
+	});
 });
