@@ -26,7 +26,7 @@
 		"jasmine": "^2.3.2"
 	},
 	"dependencies": {
-		"omniscience-sdk-resolver": "offbynone/omniscience-sdk-resolver#Dev"
+		"omniscience-sdk-resolver": "offbynone/omniscience-sdk-resolver"
 	},
 	"scripts": {
 		"lint": "eslint",
