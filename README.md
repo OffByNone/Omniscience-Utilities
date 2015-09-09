@@ -3,3 +3,7 @@
 [![David](https://img.shields.io/david/dev/OffByNone/Omniscience-Utilities.svg?style=flat-square)](https://david-dm.org/offbynone/omniscience-utilities#info=devDependencies)
 
 Modules for Omniscience that don't really fit anywhere else.
+* Eventable
+* Fetch
+* MD5
+* UrlProvider
